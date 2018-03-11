@@ -13,7 +13,7 @@
 <p>数据库:mysql</p>
 <p>后端:springMVC+spring+mybatis+tomcat+DURID</p>
 <p>前端:jQuery+css+html</p>
-<p>项目构建:maven,svn</p>
+<p>项目构建:maven,Git</p>
 <p>开发工具:Eclipse、IDEA（使用IDEA 后感觉IDEA比较好用便换成IDEA 上传的代码</p>
 
 ## 项目使用
