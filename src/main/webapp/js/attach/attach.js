@@ -45,6 +45,5 @@ function doUpload(){
 		doGetObjects();
 		}
 	});
-	//$("#uploadFormId").resetForm();
-	return false;//防止表单重复提交的一种方式
+	return false;
 }

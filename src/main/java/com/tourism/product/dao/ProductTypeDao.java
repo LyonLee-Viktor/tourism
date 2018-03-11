@@ -14,15 +14,8 @@ public interface ProductTypeDao
 	/**添加删除的方法*/
 	int deleteObject(Integer id);
 	/**判定分类下是否还有子分类*/
-	int hasChilds(Integer id);	
-	/**获得以Ztree形式进行展示的产品分类信息
-	 * 其中一个节点信息中应该包含:
-	 * 1)id
-	 * 2)parentId
-	 * 3)name
-	 * 每条记录的节点信息都要存储到一个map对象
-	 * 多个,多个节点信息再存储到list集合.
-	 * */
+	int hasChilds(Integer id);
+
 	List<Map<String,Object>>
 	findZtreeNodes();	
 	

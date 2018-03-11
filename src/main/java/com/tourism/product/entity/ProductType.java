@@ -1,15 +1,7 @@
 package com.tourism.product.entity;
 import java.io.Serializable;
 import java.util.Date;
-/**产品分类:属于旅游管理的产品分类实体
- * 例如:
- * 1)出境游
- * 1.1)置业游
- * 1.2)体育游
- * 1.3)亲子游
- * 1.4).........
- * 2)境内游
- * */
+
 public class ProductType 
        implements Serializable{
 	private static final long serialVersionUID = 7611388056449233479L;

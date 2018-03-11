@@ -1,7 +1,4 @@
 package com.tourism.common.web;
-/**借助此对象封装Controller方法上有
- * @ResponseBody注解的方法的返回值,
- * 目的:统一返回值类型,便于在页面上进行统一处理*/
 public class JsonResult {
 	private static final int SUCCESS=1;
 	private static final int ERROR=0;

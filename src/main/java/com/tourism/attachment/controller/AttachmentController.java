@@ -36,7 +36,6 @@ public class AttachmentController {
     public JsonResult doUpload(
     		String title,
     		MultipartFile mFile){
-    	//原有内容是练习上传,业务要写到service
     	attachmentService
     	.uploadObject(title,mFile);
     	return new JsonResult();
@@ -45,18 +44,17 @@ public class AttachmentController {
     @ResponseBody
     public byte[] doDownload(Integer id,HttpServletResponse response)
     		throws IOException{
-    	//1.根据id执行查找操作
+    	//根据id执行查找操作
     	Attachment a=attachmentService.findObjectById(id);
-    	//2.设置下载内容类型以及响应头(固定格式)
+    	//设置下载内容类型以及响应头(固定格式)
     	response.setContentType("appliction/octet-stream");
-    	//File fileName=new String(fileName.getBytes("iso-8859-1"),"utf-8");
     	String fileName=URLEncoder.encode(
     			a.getFileName(),"utf-8");
 		response.setHeader("Content-disposition",
 				"attachment;filename="+fileName);
-		//3.获得指定文件的路径对象(java.nio.Path)
+		//获得指定文件的路径对象(java.nio.Path)
         Path path=Paths.get(a.getFilePath());
-        //4.读取path路径对应的文件,并返回字节数组
+        //读取path路径对应的文件,并返回字节数组
     	return Files.readAllBytes(path);
     }
     

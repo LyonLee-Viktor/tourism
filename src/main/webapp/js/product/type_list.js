@@ -50,7 +50,7 @@ function doLoadEditPage(){
 	}
 	if($(this).hasClass("btn-update")){
 		title="修改分类信息"
-	    var id=getSelectedId();//获得选中的记录id值
+	    var id=getSelectedId();
 		if(id==-1){
 		  alert("请先选择");return;
 		}
@@ -64,31 +64,21 @@ function doLoadEditPage(){
 }
 /**获得选中的id值*/
 function getSelectedId(){
-	//1.1 获得选中的对象,默认返回值为一个对象数组
-	var selections=$("#typeTable")
-	.bootstrapTreeTable("getSelections");
+	var selections=$("#typeTable").bootstrapTreeTable("getSelections");
 	if(selections.length==0){
-	 return -1;//表示没选择任何对象
+	 return -1;
 	}
-	//1.2获得选中数组中下标为0的元素id的值
 	return selections[0].id;
 }
 /**执行删除操作*/
 function doDeleteObject(){
-	//debugger
-	//1.获得选中的id
 	var typeId=getSelectedId();
 	if(typeId==-1){
 		alert("请先选择");
 		return;
 	}
-	console.log("typeId="+typeId);
-	//2.发送异步请求,根据id执行删除操作
-	//2.1定义url
 	var url="type/doDeleteObject.do";
-	//2.2定义参数值("id"要与controller方法中参数的名字相同)
 	var params={"id":typeId};
-	//2.3执行异步删除操作
 	$.post(url,params,function(result){
 		if(result.state==1){
 			doGetObjects();
@@ -99,15 +89,13 @@ function doDeleteObject(){
 	});
 }
 function doGetObjects(){
- var tableId="typeTable";//对象type_list.jsp中的table id
+ var tableId="typeTable";
  var url="type/doFindGridTreeObjects.do";
  var table=new TreeTable(tableId,url,columns);
- table.setIdField("id");//设置选中记录的返回id()
- table.setCodeField("id");//设置级联关系的id
- table.setParentCodeField("parentId");//设置级联关系中的parentId
- table.setExpandColumn(2);//设置默认展开列
- table.setExpandAll(false);//设置默认不展开
- table.init();//初始化对象树(底层会发起异步请求)
+ table.setIdField("id");
+ table.setCodeField("id");
+ table.setParentCodeField("parentId");
+ table.setExpandColumn(2);
+ table.setExpandAll(false);
+ table.init();
 }
-
-

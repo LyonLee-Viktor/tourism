@@ -6,12 +6,7 @@ import java.util.Date;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.tourism.common.web.JsonDateTypeConvert;
 
-/**用于封装团信息:
- * 业务:一个项目下可以有多个团
- * 表关系:one2many
- * 表设计:关联字段projectId
- * 应该添加多的一端,例如在tms_teams表中添加projectId
- * */
+
 public class Team implements Serializable{
 	private static final long serialVersionUID = 368009064732092303L;
     /**团的id*/

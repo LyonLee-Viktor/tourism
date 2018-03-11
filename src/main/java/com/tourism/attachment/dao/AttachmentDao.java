@@ -12,5 +12,6 @@ public interface AttachmentDao {
 	List<Attachment> findObjects();
 	/**根据id查找某个对象*/
 	Attachment findObjectById(Integer id);
-	
+
+
 }

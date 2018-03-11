@@ -33,9 +33,9 @@ public class TeamController {
 	@RequestMapping("doUpdateObject")
 	@ResponseBody
 	public JsonResult doUpdateObject(Team entity){
-		//1.修改团信息
+
 		teamService.updateObject(entity);
-		//2.返回响应信息
+
 		return new JsonResult();
 	}
 	/**根据id执行查找操作
@@ -82,10 +82,10 @@ public class TeamController {
 	public JsonResult doValidById(
 			String checkedIds,
 			Integer valid){
-		 //1.更新状态
+		 //更新状态
 	     teamService.validById(checkedIds,
 	    		 valid);
-	     //2.返回状态信息
+	     //返回状态信息
 	     return new JsonResult();
 	}
 	

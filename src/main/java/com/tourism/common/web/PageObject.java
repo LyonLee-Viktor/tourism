@@ -13,9 +13,7 @@ public class PageObject implements Serializable{
 	private int rowCount;
 	/**总页数*/
 	private int pageCount;
-	/**上一页的最后一条记录位置
-	 * 对应:limit startIndex,pageSize;
-	 */
+	/**上一页的最后一条记录位置*/
 	private int startIndex;
 	public int getPageCurrent() {
 		return pageCurrent;

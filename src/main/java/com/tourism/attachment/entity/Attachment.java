@@ -8,17 +8,17 @@ public class Attachment implements Serializable{
     private Integer id;
     /**附件标题*/
     private String title;
-    /**文件名称(实际的文件名)*/
+    /**文件名称*/
     private String fileName;
     /**文件内容类型*/
     private String contentType;
-    /**文件路径(实际存储的路径)*/
+    /**文件路径*/
     private String filePath;
-    /**文件摘要信息(一般为MD5对内容加密以后的一个结果)*/
+    /**文件摘要信息*/
     private String fileDisgest;
-    /**归属类型(例如附件属于哪个对象的附件,是产品的还是分销商)*/
+    /**归属类型*/
     private Integer  athType;
-    /**具体归属对象(例如具体归属哪个产品)*/
+    /**具体归属对象*/
     private Integer belongId;
     
     private Date createdTime;

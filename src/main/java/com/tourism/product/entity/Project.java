@@ -5,9 +5,7 @@ import java.util.Date;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.tourism.common.web.JsonDateTypeConvert;
 
-/**项目信息实体对象:
- * 对应的表:tms_projects
- * */
+
 public class Project implements Serializable{
 	private static final long serialVersionUID = 5850357988911265658L;
 	/**项目id,对应表中的主键值*/

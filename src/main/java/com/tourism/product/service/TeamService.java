@@ -15,11 +15,7 @@ public interface TeamService {
 	 List<Map<String,Object>>
 	           findPrjIdAndNames();
 	 
-	 /**禁用和启用团信息
-	  * @param ids对应页面上选中的多个团id值
-	  * 例如ids=1,2,3,4,5
-	  * @param valid 对应禁用或启用的状态值
-	  * */
+	 /**禁用和启用团信息*/
 	 void validById(String ids, Integer valid);
 	 /**保存团信息*/
 	 void saveObject(Team entity);
