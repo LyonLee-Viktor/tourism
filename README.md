@@ -1,6 +1,8 @@
 # tourism Pruduct management System
-旅游产品管理系统 
-![image](https://github.com/BliizardLyon/tourism/blob/master/src/main/webapp/images/logo.png)
+![image](https://github.com/BliizardLyon/tourism/blob/master/src/main/webapp/images/logo-blank.png)
+### 旅游产品管理系统 
+
+
 ## 项目简介
 ##### 本项目主要实现了产品管理模块
 ##### 1.对产品数据的管理，以及对产品状态的管理
