@@ -25,6 +25,7 @@ public class Attachment implements Serializable{
     private Date modifiedTime;
     private String createdUser;
     private String modifiedUser;
+
 	public Integer getId() {
 		return id;
 	}
